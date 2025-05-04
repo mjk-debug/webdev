@@ -1,0 +1,1 @@
+document.getElementById('quizForm').addEventListener('submit', function(e) { e.preventDefault(); document.getElementById('result').innerText = 'Submitted!'; });
