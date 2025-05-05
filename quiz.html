@@ -1,94 +1,66 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
-
-
-  
-  
-  
-  
-  
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
   <header>
-    <h1>JavaScript &amp; DHTML Quiz</h1>
+    <h1>World Wide Web Quiz</h1>
     <nav>
       <ul class="nav">
-        <li><a rel="noopener" href="index.html">Home</a></li>
-        <li><a rel="noopener" href="beginnings.html">The Beginning</a></li>
-        <li><a rel="noopener" href="browsers.html">Web Browsers</a></li>
-        <li><a rel="noopener" href="references.html">References</a></li>
-        <li><a rel="noopener" href="quiz.html">Quiz</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beginnings.html">The Beginning</a></li>
+        <li><a href="browsers.html">Web Browsers</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+        <li><a href="references.html">References</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    
-      <section>
-        <h2>1. Which language is used to make a web page interactive?</h2>
-        <label> JavaScript</label><br/>
-        <label> HTML</label><br/>
-        <label> CSS</label>
-      </section>
+    <section class="quiz-section">
+      <form id="quizForm">
+        <div class="question">
+          <p>1. Who invented the World Wide Web?</p>
+          <label><input type="radio" name="q1" value="a" /> Steve Jobs</label>
+          <label><input type="radio" name="q1" value="b" /> Bill Gates</label>
+          <label><input type="radio" name="q1" value="c" /> Tim Berners-Lee</label>
+        </div>
 
-      <section>
-        <h2>2. What does DOM stand for?</h2>
-        <label> Display Output Mode</label><br/>
-        <label> Document Object Model</label><br/>
-        <label> Dynamic Object Mapper</label>
-      </section>
+        <div class="question">
+          <p>2. What does HTML stand for?</p>
+          <label><input type="radio" name="q2" value="a" /> HyperText Markup Language</label>
+          <label><input type="radio" name="q2" value="b" /> Home Tool Markup Language</label>
+          <label><input type="radio" name="q2" value="c" /> Hyperlinks and Text Management Language</label>
+        </div>
 
-      <section>
-        <h2>3. Which jQuery selector targets all &lt;p&gt; elements?</h2>
-        <label> $(&#39;p&#39;)</label><br/>
-        <label> $p</label><br/>
-        <label> $(p)</label>
-      </section>
+        <div class="question">
+          <p>3. Which browser was the first to use a graphical interface?</p>
+          <label><input type="radio" name="q3" value="a" /> Internet Explorer</label>
+          <label><input type="radio" name="q3" value="b" /> Mosaic</label>
+          <label><input type="radio" name="q3" value="c" /> Firefox</label>
+        </div>
 
-      <section>
-        <h2>4. What keyword is used to define a variable in JavaScript?</h2>
-        
-      </section>
+        <div class="question">
+          <p>4. What is the function of CSS?</p>
+          <label><input type="radio" name="q4" value="a" /> Structure web pages</label>
+          <label><input type="radio" name="q4" value="b" /> Style web pages</label>
+          <label><input type="radio" name="q4" value="c" /> Query databases</label>
+        </div>
 
-      <section>
-        <h2>5. Select all dynamic capabilities of DHTML:</h2>
-        <label> Changing content with JS</label><br/>
-        <label> Responding to user events</label><br/>
-        <label> Writing server-side PHP</label>
-      </section>
-
-      Submit Quiz
-      Restart Quiz
-    
-
-    <section></section>
+        <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+        <p id="result"></p>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>&#169; 2025 Web Development Class Project</p>
+    <p>&copy; 2025 Web Development Class Project</p>
   </footer>
 
-
-<script type="module" src="https://s.brightspace.com/lib/bsi/2025.4.217/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-						if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
-							document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
-								elm.setAttribute('style', 'display: block; height: 0.5rem;');
-							});
-
-							document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
-								const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
-								elm.replaceWith(mrow);
-							});
-
-							window.D2L.MathJax.loadMathJax({
-								outputScale: 1.5,
-								renderLatex: true,
-								enableMML3Support: false
-							});
-						}
-					});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.4.217/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					document.querySelectorAll('.d2l-code').forEach(code => {
-						window.D2L.Prism.formatCodeElement(code);
-					});
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.4.217/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					window.D2L.EmbedRenderer.renderEmbeds(document.body);
-				});</script></body></html>
+  <script src="quiz.js"></script>
+</body>
+</html>
