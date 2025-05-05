@@ -1,82 +1,56 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
-
-
-
-  
-  
-  
-  
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beginnings of the Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
   <header>
-    <h1>The Beginning of the World Wide Web</h1>
+    <h1>The Beginning of the Web</h1>
     <nav>
       <ul class="nav">
-        <li><a rel="noopener" href="index.html">Home</a></li>
-        <li><a rel="noopener" href="beginnings.html">The Beginning</a></li>
-        <li><a rel="noopener" href="browsers.html">Web Browsers</a></li>
-        <li><a rel="noopener" href="references.html">References</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beginnings.html">The Beginning</a></li>
+        <li><a href="browsers.html">Web Browsers</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="references.html">References</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Origins of the Web</h2>
+    <section class="content">
+      <h2>Origins of the World Wide Web</h2>
       <p>
-        The World Wide Web (WWW) was envisioned by British computer scientist Sir Tim Berners-Lee in 1989 while working at CERN. At the time, researchers worldwide faced challenges sharing information due to incompatible computer systems. Berners-Lee proposed a system using hypertext to link and access documents across different systems, summarized in a proposal titled &quot;Information Management: A Proposal.&quot;
+        The World Wide Web was envisioned by British computer scientist <strong>Sir Tim Berners-Lee</strong> in 1989 while working at CERN.
+        At the time, global researchers struggled to share data across incompatible systems. Berners-Lee proposed a system using <em>hypertext</em>
+        to interlink information. His proposal titled <q>Information Management: A Proposal</q> marked the birth of the web.
       </p>
-    </section>
 
-    <section>
-      <h2>Foundational Technologies</h2>
       <p>
-        In 1990, Berners-Lee developed three critical technologies that form the basis of the modern Web:
+        By 1990, Berners-Lee developed three foundational technologies:
       </p>
       <ul>
-        <li><strong>HTML</strong> – the language used to create web pages</li>
-        <li><strong>HTTP</strong> – the protocol used to transfer web content</li>
-        <li><strong>URI</strong> – Uniform Resource Identifier, used to locate web resources</li>
+        <li><strong>HTML</strong> – For structuring web content</li>
+        <li><strong>HTTP</strong> – For transferring data</li>
+        <li><strong>URI</strong> – For locating resources (now commonly known as URLs)</li>
       </ul>
-      <p>
-        That same year, he also created the first web browser, <em>WorldWideWeb.app</em>, and the first web server software, <em>httpd</em>. The first website went live at CERN in 1991, marking the official launch of the World Wide Web.
-      </p>
-    </section>
 
-    <section>
-      <h2>Impact</h2>
       <p>
-        The Web has since transformed global communication, information sharing, and technology itself, setting the stage for continuous innovation and digital transformation.
+        He also created the first browser and web server, launching the first website in 1991 hosted at CERN.
       </p>
+
+      <div class="image-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/WorldWideWeb_FSF_GNU.png/320px-WorldWideWeb_FSF_GNU.png" alt="First Web Browser Interface" />
+        <p class="caption">Screenshot of WorldWideWeb browser developed by Tim Berners-Lee</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&#169; 2025 Web Development Class Project</p>
+    <p>&copy; 2025 Web Development Project</p>
   </footer>
-
-
-<script type="module" src="https://s.brightspace.com/lib/bsi/2025.4.217/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-						if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
-							document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
-								elm.setAttribute('style', 'display: block; height: 0.5rem;');
-							});
-
-							document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
-								const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
-								elm.replaceWith(mrow);
-							});
-
-							window.D2L.MathJax.loadMathJax({
-								outputScale: 1.5,
-								renderLatex: true,
-								enableMML3Support: false
-							});
-						}
-					});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.4.217/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					document.querySelectorAll('.d2l-code').forEach(code => {
-						window.D2L.Prism.formatCodeElement(code);
-					});
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.4.217/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					window.D2L.EmbedRenderer.renderEmbeds(document.body);
-				});</script></body></html>
+</body>
+</html>
