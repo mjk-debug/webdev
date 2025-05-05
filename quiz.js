@@ -1,60 +1,63 @@
-// quiz.js - Handles quiz scoring and feedback
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="quiz.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Web Quiz</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beginnings.html">The Beginning</a></li>
+        <li><a href="browsers.html">Web Browsers</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
 
-document.getElementById("quizForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+  <main>
+    <section class="content">
+      <h2>Test Your Web Knowledge</h2>
+      <form id="quizForm">
+        <div class="form-group">
+          <label for="q1">1. Who invented the World Wide Web?</label>
+          <input type="text" id="q1" name="q1" placeholder="Your answer..." required />
+        </div>
 
-  let score = 0;
-  let total = 5;
-  let resultHTML = "<h2>Results:</h2>";
+        <div class="form-group">
+          <label for="q2">2. What does HTML stand for?</label>
+          <input type="text" id="q2" name="q2" placeholder="Your answer..." required />
+        </div>
 
-  // Q1–Q3: Single-answer (radio)
-  for (let i = 1; i <= 3; i++) {
-    let answer = document.querySelector(`input[name=q${i}]:checked`);
-    if (answer) {
-      if (answer.value === "correct") {
-        score++;
-        resultHTML += `<p>Q${i}: ✅ Correct</p>`;
-      } else {
-        resultHTML += `<p>Q${i}: ❌ Incorrect</p>`;
-      }
-    } else {
-      resultHTML += `<p>Q${i}: ❌ Not answered</p>`;
-    }
-  }
+        <div class="form-group">
+          <label for="q3">3. What was the name of the first graphical browser?</label>
+          <input type="text" id="q3" name="q3" placeholder="Your answer..." required />
+        </div>
 
-  // Q4: Fill-in-the-blank
-  let q4 = document.getElementById("q4").value.trim().toLowerCase();
-  if (q4 === "var" || q4 === "let" || q4 === "const") {
-    score++;
-    resultHTML += `<p>Q4: ✅ Correct</p>`;
-  } else {
-    resultHTML += `<p>Q4: ❌ Incorrect (expected: var, let, or const)</p>`;
-  }
+        <div class="form-group">
+          <label for="q4">4. What protocol is used to transfer web pages?</label>
+          <input type="text" id="q4" name="q4" placeholder="Your answer..." required />
+        </div>
 
-  // Q5: Multiple answers (checkboxes)
-  let q5 = document.querySelectorAll("input[name=q5]");
-  let correctAnswers = 0;
-  q5.forEach(cb => {
-    if (cb.checked && cb.value === "correct") correctAnswers++;
-    if (cb.checked && cb.value === "wrong") correctAnswers--;
-  });
-  if (correctAnswers === 2) {
-    score++;
-    resultHTML += `<p>Q5: ✅ Correct</p>`;
-  } else {
-    resultHTML += `<p>Q5: ❌ Incorrect</p>`;
-  }
+        <div class="form-group">
+          <label for="q5">5. Which browser is currently the most widely used?</label>
+          <input type="text" id="q5" name="q5" placeholder="Your answer..." required />
+        </div>
 
-  // Show result
-  resultHTML += `<p><strong>Final Score: ${score}/${total}</strong></p>`;
-  resultHTML += score >= 4
-    ? `<p style='color:green'><strong>✅ You passed!</strong></p>`
-    : `<p style='color:red'><strong>❌ You did not pass. Try again.</strong></p>`;
+        <button type="submit" class="submit-btn">Submit Quiz</button>
+        <div id="result" class="quiz-result"></div>
+      </form>
+    </section>
+  </main>
 
-  document.getElementById("results").innerHTML = resultHTML;
-});
-
-function restartQuiz() {
-  document.getElementById("quizForm").reset();
-  document.getElementById("results").innerHTML = "";
-}
+  <footer>
+    <p>&copy; 2025 Web Development Project</p>
+  </footer>
+</body>
+</html>
